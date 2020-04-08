@@ -2,7 +2,7 @@ import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-public final class Personnel implements Serializable {
+public final class Personnel  extends Interface_annuaire implements Serializable{
 	
 	/**
 	 * 
