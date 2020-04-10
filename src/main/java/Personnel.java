@@ -2,7 +2,7 @@ import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-public final class Personnel  extends Interface_annuaire implements Serializable{
+public final class Personnel  implements Interface_annuaire, Serializable{
 	
 	/**
 	 * 
@@ -29,14 +29,11 @@ public final class Personnel  extends Interface_annuaire implements Serializable
 	}
 	
 	public void tostring() {
-		
-		System.out.println("****************");
 		System.out.print(prenom + " " + nom + ", Née le : " + Date + ", numéro de teléphone : ");
 		for (String i : tel) {
 			System.out.print(i + "  ");
 		}
 		System.out.println("\n");
-		System.out.println("****************");
 	}
 	 
 	
