@@ -6,11 +6,11 @@ import java.util.Iterator;
  * 
  */
 
-/** Classe CompositePersonnel qui h�rite de la classe Abstraire Interface_annuaire
+/** Classe CompositePersonnel qui herite de la classe Abstraire Interface_annuaire
  * @author Win10
  *
  */
-public class CompositePersonnel extends Interface_annuaire implements Serializable {
+public class CompositePersonnel implements Interface_annuaire, Serializable {
 	
 	private String nomAnnuaire;
     private ArrayList<Interface_annuaire> listPersonnels = new ArrayList<Interface_annuaire>();
@@ -24,14 +24,14 @@ public class CompositePersonnel extends Interface_annuaire implements Serializab
     }
    
     /* 
-     * Constructeur qui prend une chaine de caract�re en entr�e 
+     * Constructeur qui prend une chaine de caracteres en entree 
      */
     public CompositePersonnel(String nom)
     {
         this.nomAnnuaire = nom;
     }
     /* 
-     * Constructeur par d�fault 
+     * Constructeur par default 
      */
     public CompositePersonnel(){
     	
