@@ -3,4 +3,57 @@
   <groupId>zaouam-project</groupId>
   <artifactId>Exercice5.1</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
+   <dependencies>
+     <dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>5.1.6</version>
+ </dependency>
+  </dependencies>
+  
+   <reporting>
+    <plugins>
+	  <plugin>
+		<groupId>org.apache.maven.plugins</groupId>
+		<artifactId>maven-site-plugin</artifactId>
+		<version>3.3</version>
+	  </plugin>
+	  <plugin>
+		<groupId>org.apache.maven.plugins</groupId>
+		<artifactId>maven-project-info-reports-plugin</artifactId>
+		<version>2.7</version>
+	  </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>3.0.1</version>
+        <configuration>
+        </configuration>
+      </plugin>
+      <plugin>
+	    <groupId>org.apache.maven.plugins</groupId>
+	    <artifactId>maven-checkstyle-plugin</artifactId>
+	    <version>3.0.0</version>
+	    <reportSets>
+		  <reportSet>
+		    <reports>
+			  <report>checkstyle</report>
+		    </reports>
+		  </reportSet>
+	    </reportSets>
+	  </plugin>
+      <plugin>
+		<groupId>com.github.spotbugs</groupId>
+		<artifactId>spotbugs-maven-plugin</artifactId>
+		<version>3.1.8</version>
+	  </plugin>
+    </plugins>
+  </reporting>
+  
 </project>
+
