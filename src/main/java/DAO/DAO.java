@@ -1,35 +1,39 @@
 package DAO;
 
-import java.sql.Connection;
+import java.util.ArrayList;
+import java.util.Map;
 
+/**
+ * Pattern DAO.
+ * @param <T> type pour le DAO
+ */
 public abstract class DAO<T>{
-	
-	public  Connection connect ;
-	/**
-	 * Permet de récupérer un objet via son nom
-	 * @param nom
-	 * @return
+	/*
+	 * Obtenir un element par son identifiant
+	 * @param id l'identifiant de l'element qu'on veut obtenir
+	 * @return l'element souhaite
 	 */
-	public abstract T find(String nom);
+	public abstract T find(int id);
 	
-	/**
-	 * Permet de créer une entrée dans la base de données
-	 * par rapport à un objet
-	 * @param obj
-	 * @throws ClassNotFoundException 
+	/*
+	 * Ajout un element au DAO
+	 * @param obj l'objet a ajouter
 	 */
-	public abstract T create(T obj) throws ClassNotFoundException;
-	
-	/**
-	 * Permet de mettre à jour les données d'une entrée dans la base 
-	 * @param obj
-	 * @throws ClassNotFoundException 
+	public abstract void ajouter(T obj) ;
+	/*
+	 * Obtenir la liste de tous les elements du DAO
+	 * @return la liste des elements du DAO
 	 */
-	public abstract T update(T obj) throws ClassNotFoundException;
-	
-	/**
-	 * Permet la suppression d'une entrée de la base
-	 * @param obj
+	public abstract ArrayList<T> findAll();
+	/*
+	 * Permet de modifier un element du DAO
+	 * @param obj l'element a modifier
+	 * @param params les parametres qu'on veut modifier
+	 */
+	public abstract void update(T obj, Map<String, Object> params);
+	/*
+	 * Permet la supprission d'un element du DAO
+	 * @param obj l'element a supprimer
 	 */
 	public abstract void delete(T obj);
 }
