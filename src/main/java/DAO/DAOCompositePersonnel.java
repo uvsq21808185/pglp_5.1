@@ -13,6 +13,8 @@ import Serialization.CompositePersonnel;
 import Serialization.Interface_annuaire;
 /**
  * DAO pour la classe CompositePersonnel.
+ * @author ZAOUAM Sirageddine
+ * @version 2.0
  */
 
 public class DAOCompositePersonnel extends DAO<CompositePersonnel> implements Serializable {
@@ -120,6 +122,7 @@ public class DAOCompositePersonnel extends DAO<CompositePersonnel> implements Se
 	/*
 	 * Deserializer vers le chemin voulu "path" saisi en parametre
 	 * @param path le chemin depuis lequel on veut deserializer l'objet DAOCompositePersonnel.
+	 * @return un DAOCompositePersonnel.
 	 */
     public static DAOCompositePersonnel deserializer_daocompositepersonnel(final String path) {
         ObjectInputStream obj = null;

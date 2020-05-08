@@ -1,6 +1,10 @@
 package Serialization;
 import java.time.LocalDate;
-
+/*
+ * 
+ * @author ZAOUAM Sirageddine
+ * @version 2.0
+ */
 public class SerializerPersonnel {
 
 	public static void main(String[] args) {

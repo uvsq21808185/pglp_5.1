@@ -1,6 +1,9 @@
 package Serialization;
 /*
- * Interface pour le pattern composite associe a CompositePersonnel
+ * Interface pour le pattern composite associe a CompositePersonnel.
+ * 
+ * @author ZAOUAM Sirageddine
+ * @version 2.0
  */
 public interface  Interface_annuaire {
 	/*

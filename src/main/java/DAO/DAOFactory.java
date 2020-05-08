@@ -2,7 +2,12 @@ package DAO;
 
 import Serialization.CompositePersonnel;
 import Serialization.Personnel;
-
+/*
+ * La classe fabrique des Dao.
+ * 
+ * @author ZAOUAM Sirageddine
+ * @version 2.0
+ */
 public final class DAOFactory {
 	
 	    /**

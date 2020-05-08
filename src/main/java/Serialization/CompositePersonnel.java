@@ -9,7 +9,8 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 /** Classe CompositePersonnel qui herite de la classe Abstraire Interface_annuaire
- * @author Win10
+ * @author ZAOUAM Sirageddine
+ * @version 2.0
  *
  */
 public class CompositePersonnel implements Interface_annuaire, Serializable {
@@ -51,6 +52,7 @@ public class CompositePersonnel implements Interface_annuaire, Serializable {
 	}
     /* 
      * Constructeur qui prend l'identifiant du composite en entree.
+     * @param id l'identifiant
      */
     public CompositePersonnel(int id)
     {
@@ -65,7 +67,9 @@ public class CompositePersonnel implements Interface_annuaire, Serializable {
         listPersonnels = new ArrayList<Interface_annuaire>();
     }
     /* 
-     * Methode pour ajouter des personnels dans la liste 
+     * Methode pour ajouter des personnels dans la liste.
+     * @param personnel le personnel.
+     * @return le composite personnel après l'ajout.
      */
     public CompositePersonnel addPersonnel(Interface_annuaire personnel)
     {
@@ -73,22 +77,26 @@ public class CompositePersonnel implements Interface_annuaire, Serializable {
         return this;
     }
     /* 
-     * Methode pour supprimer des personnels de la liste 
+     * Methode pour supprimer des personnels de la liste.
+     * @param personnel le personnel.
+     * @return le composite personnel après suppression.
+     * 
      */
-
     public CompositePersonnel removePersonnel(Interface_annuaire personnel)
     {
         listPersonnels.remove(personnel);
         return this;
     }
     /* 
-     * Cette methode renvoie un iterateur sur ListPersonnels
+     * Cette methode renvoie un iterateur sur ListPersonnels.
+     * @return un itérateur sur listPersonnels.
      */
     public Iterator<Interface_annuaire> iterator() {
 		return listPersonnels.iterator();
 	}
     /*
      * Retourne l'identifiant de personnel.
+     * @return l'identifiant de personnel.
      */
     public final int getId() {
         return id;
@@ -125,6 +133,7 @@ public class CompositePersonnel implements Interface_annuaire, Serializable {
 	/*
 	 * Deserializer vers le chemin voulu "path"
 	 * @param path le chemin depuis lequel on veut deserializer l'objet CompositePersonnel.
+	 * @return un composite personnel.
 	 */
     public static CompositePersonnel deserializer_composite(final String path) {
         ObjectInputStream obj = null;

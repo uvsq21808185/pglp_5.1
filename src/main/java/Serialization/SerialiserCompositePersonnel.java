@@ -1,7 +1,11 @@
 package Serialization;
 import java.time.LocalDate;
 import java.util.ArrayList;
-
+/*
+ * 
+ * @author ZAOUAM Sirageddine
+ * @version 2.0
+ */
 public class SerialiserCompositePersonnel {
 
 	public static void main(String[] args) {

@@ -1,22 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: testDAO.DAOCompositePersonnelTest
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.039 sec <<< FAILURE!
-testDAO.DAOCompositePersonnelTest.test_ajouter_find()  Time elapsed: 0.001 sec  <<< FAILURE!
-java.lang.NoClassDefFoundError: org/junit/Assert
-	at testDAO.DAOCompositePersonnelTest.test_ajouter_find(DAOCompositePersonnelTest.java:21)
-Caused by: java.lang.ClassNotFoundException: org.junit.Assert
-	at java.net.URLClassLoader.findClass(Unknown Source)
-	at java.lang.ClassLoader.loadClass(Unknown Source)
-	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
-	at java.lang.ClassLoader.loadClass(Unknown Source)
-	... 19 more
-
-testDAO.DAOCompositePersonnelTest.testSerialization()  Time elapsed: 0.035 sec  <<< FAILURE!
-java.lang.NoClassDefFoundError: org/junit/Assert
-	at testDAO.DAOCompositePersonnelTest.testSerialization(DAOCompositePersonnelTest.java:47)
-
-testDAO.DAOCompositePersonnelTest.testdelete()  Time elapsed: 0 sec  <<< FAILURE!
-java.lang.NoClassDefFoundError: org/junit/Assert
-	at testDAO.DAOCompositePersonnelTest.testdelete(DAOCompositePersonnelTest.java:31)
-
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.113 sec

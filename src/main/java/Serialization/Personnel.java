@@ -9,7 +9,10 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
- * La classe décrivant personnel et qui implémente l'interface "Interface_annuaire"
+ * La classe décrivant personnel et qui implémente l'interface "Interface_annuaire".
+ * 
+ * @author ZAOUAM Sirageddine.
+ * @version 2.0
  * 
  */
 public final class Personnel  implements Interface_annuaire, Serializable{
@@ -76,7 +79,8 @@ public final class Personnel  implements Interface_annuaire, Serializable{
         return id;
     }
 	/*
-	 * Un constructeur qui utilise le builder pour creer le personnel
+	 * Un constructeur qui utilise le builder pour creer le personnel.
+	 * @param builder le builder
 	 * @return un builder pour personnel
 	 */
 	private Personnel(final Personnel_Builder builder)
@@ -100,7 +104,8 @@ public final class Personnel  implements Interface_annuaire, Serializable{
 	}
 	/*
 	 * String representant l'objet Personnel : on aura besoin de cette methode pour le test
-	 * tester si le String de l'objet Personnel est le meme que le string de l'objet deseralizer
+	 * tester si le String de l'objet Personnel est le meme que le string de l'objet deseralizer.
+	 * @return un string de personnel.
 	 */
 	public String tostring_test() {
 		String s = prenom + " " + nom + ", Nee le : " + Date + ", numero de telephone : ";
@@ -151,6 +156,7 @@ public final class Personnel  implements Interface_annuaire, Serializable{
 		/*
 		 * Une nouvelle classe de personnel instanciee en ajoutant la liste des numeros de telephone
 		 * @param tel La liste de numeros de tel qu'on veut ajouter.
+		 * @return un personnel_builder avec la nouvelle liste des numéros de telephone.
 		 */
 		public Personnel_Builder tel (ArrayList<String> tel) {
 			this.tel=tel;
@@ -159,6 +165,7 @@ public final class Personnel  implements Interface_annuaire, Serializable{
 		/*
 		 * Une nouvelle classe de personnel instanciee en ajoutant la date de naissance de la personne
 		 * @param tel La date de naissance de la personne qu'on veur ajouter.
+		 * @return un personnel builder.
 		 */
 		public Personnel_Builder date (java.time.LocalDate date) {
 			this.date=date;
@@ -204,6 +211,7 @@ public final class Personnel  implements Interface_annuaire, Serializable{
 	/*
 	 * Deserializer vers le chemin voulu "path" saisi en parametre
 	 * @param path le chemin depuis lequel on veut deserializer l'objet Personnel.
+	 * @return un Personnel.
 	 */
     public static Personnel deserializer_personnel(final String path) {
         ObjectInputStream obj = null;

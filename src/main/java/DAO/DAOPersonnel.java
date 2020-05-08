@@ -13,7 +13,10 @@ import java.util.Map;
 import Serialization.Personnel;
 
 /**
- * DAO pour la classe Personnel et qui implemente l'interface DAO<T>.
+ * DAO pour la classe Personnel et qui implemente l'interface DAO.
+ * 
+ * @author Win10 ZAOUAM Sirageddine
+ * @version 2.0
  */
 public class DAOPersonnel extends DAO<Personnel> implements Serializable {
 	
@@ -142,6 +145,7 @@ public class DAOPersonnel extends DAO<Personnel> implements Serializable {
 	/*
 	 * Deserializer vers le chemin voulu "path" saisi en parametre
 	 * @param path le chemin depuis lequel on veut deserializer l'objet Personnel.
+	 * @return un DAOPersonnel
 	 */
     public static DAOPersonnel deserializer_daopersonnel(final String path) {
         ObjectInputStream obj = null;

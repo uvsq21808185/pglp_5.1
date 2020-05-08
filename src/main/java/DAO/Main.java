@@ -4,7 +4,12 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 
 import Serialization.Personnel;
-
+/*
+ * La classe main.
+ * 
+ * @author ZAOUAM Sirageddine
+ * @version 2.0
+ */
 public class main {
 
 	public static void main(String[] args) {
